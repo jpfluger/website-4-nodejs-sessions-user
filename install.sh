@@ -28,6 +28,8 @@ function bowerInstall {
     #    exit 1
     #fi
 
+    bower update
+
     if [ -d "${PUBLICDIR_THIRDPARTY}" ]; then
         rm -R ${PUBLICDIR_THIRDPARTY}
     fi

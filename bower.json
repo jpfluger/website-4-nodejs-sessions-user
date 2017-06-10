@@ -8,6 +8,6 @@
     "moment": "^2.18.1",
     "numeraljs": "^2.0.6",
     "jquery.serializeJSON": "^2.8.1",
-    "zazzy-browser": "^0.1.1"
+    "zazzy-browser": "^0.2.1"
   }
 }

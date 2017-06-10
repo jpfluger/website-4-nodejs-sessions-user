@@ -13,7 +13,7 @@ $(document).ready(function () {
     }
   })
 
-  zzb.status(function(err, status) {
+  zzb.status.get(function(err, status) {
     if (err) {
       console.log(err)      
     } 
