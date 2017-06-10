@@ -1,0 +1,67 @@
+<include('../../templates/master.marko', {title: "Settings"})>
+
+  <@layoutPageJS>
+    <script src="/u/settings/static/settings-edit.js"></script>
+  </@layoutPageJS>
+
+  <@layoutMainContent>
+
+    <div class="container">
+
+      <form id="form_edit_user_settings" class="form-signin form-edits-single-column">
+        <h2 class="form-signin-heading">User settings</h2>
+
+        <div class="panel-group">
+          <div class="panel panel-default">
+            <div class="panel-heading">Primary</div>
+            <div class="panel-body">
+
+              <div class="form-group zzb-form-field" zzb-fieldname="fullname">
+                <label for="fullname" class="sr-only zzb-form-field-label">Fullname</label>
+                <div class="input-group input-group-full-width">
+                  <input type="text" name="fullname" class="form-control zzb-form-field-value" placeholder="Fullname" required autofocus value="${data.user.fullname}">
+                  <div class="input-group-addon form-glyph-popover zzb-form-field-error hidden"></div>
+                </div>
+              </div>
+
+              <div class="form-group zzb-form-field" zzb-fieldname="username">
+                <label for="username" class="sr-only zzb-form-field-label">Username</label>
+                <div class="input-group input-group-full-width">
+                  <input type="text" name="username" class="form-control zzb-form-field-value" placeholder="Username" required readonly value="${data.user.username}">
+                  <!--<div class="input-group-addon form-glyph-popover zzb-form-field-error hidden"></div>-->
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="input-group input-group-full-width">  
+                  Change password
+                  <button id="button_show_change_password_dialog" href="/u/settings/password-dialog" class="btn btn-info">Change</button>
+                </div>
+              </div>
+
+              <div>
+                <button id="button_settings_save" href="/u/settings" class="btn btn-lg btn-primary pull-right" type="submit">Save</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">Account</div>
+            <div class="panel-body">
+
+              <div class="form-group">
+                <div class="input-group input-group-full-width">  
+                  Delete the user "<strong>${out.global.locals.zzbStatus.user.username}</strong>"
+                  <button id="button_delete_user" href="/u/settings/delete" class="btn btn-danger">Delete</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+
+  </@layoutMainContent>
+</include>
