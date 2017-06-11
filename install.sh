@@ -66,7 +66,7 @@ function bowerInstall {
 
     # zazzy-browser (zzb)
     mkdir -p ${PUBLICDIR_THIRDPARTY}/zazzy-browser/dist
-    cp ${BOWERDIR}/zazzy-browser/dist/zzb.min.js ${PUBLICDIR_THIRDPARTY}/zazzy-browser/dist/zzb.min.js
+    cp ${BOWERDIR}/zazzy-browser/dist/* ${PUBLICDIR_THIRDPARTY}/zazzy-browser/dist/
 
     echo "bower folders created:"
     ls ${PUBLICDIR_THIRDPARTY}/
