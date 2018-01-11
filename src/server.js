@@ -60,7 +60,7 @@ var runApp = function () {
       }
 
       data = data || {}
-      data.$global = {locals: res.locals, escapeHtml: db.escapeHtml}
+      data.$global = {locals: res.locals, escapeHtml: db.escapeHtml}      
 
       // it's okay if data is null
       res.marko(marko[pathToFile], data)
